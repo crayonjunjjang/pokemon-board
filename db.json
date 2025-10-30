@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "이주이",
+      "username": "zhun",
+      "password": "$2b$10$06bf4PizwIj4P8TQJXBmlu4AdmKcU2zGMLC3X9eLra4OWZW1v86/2"
+    },
+    {
+      "id": 2,
+      "name": "Admin",
+      "username": "admin",
+      "password": "$2b$10$/LH2QfSFmVqWTAqXuAhLdem8T2RZsDD6H7aYSgz6Jb33C03Du1266"
+    }
+  ],
+  "posts": [
+    {
+      "id": 3,
+      "title": "피카츄 잡는 법 (공유)",
+      "author": "한지우",
+      "authorId": 2,
+      "createdAt": "2025-10-28",
+      "content": "<p>피카츄를 잡기 위해서는 먼저 숲에서 피카츄를 찾아야 합니다. 몬스터볼을 던지기 전에, 다른 포켓몬으로 체력을 조금 줄여두면 포획 확률이 올라갑니다. 하지만 너무 강하게 공격하면 기절해버리니 주의하세요!</p>"
+    },
+    {
+      "id": 2,
+      "title": "파이리 분양합니다.",
+      "author": "오박사",
+      "authorId": 2,
+      "createdAt": "2025-10-27",
+      "content": "<p>새로운 트레이너에게 파이리를 분양합니다. 성격은 온순하고, 불꽃 기술을 가지고 있습니다. 사랑으로 키워주실 분을 찾습니다. 관심 있는 분은 태초마을의 오박사 연구소로 연락주세요.</p>"
+    },
+    {
+      "id": 1,
+      "title": "꼬부기 썬글라스 공동구매 하실 분?",
+      "author": "경찰관",
+      "authorId": 1,
+      "createdAt": "2025-10-26",
+      "content": "<p>저희 꼬부기 소방단의 썬글라스가 낡아서 새로 맞추려고 합니다. 멋진 검은색 썬글라스를 대량으로 구매하면 할인이 된다고 합니다. 함께 구매해서 배송비를 아끼실 분들을 모집합니다.</p>"
+    },
+    {
+      "id": 4,
+      "title": "포켓몬 추천",
+      "author": "이주이",
+      "authorId": 1,
+      "createdAt": "2025-10-28",
+      "content": "<p>포켓몬 게임중 뭐가 제일 재밌나요??\n내공 1000000000000000000</p>",
+      "comments": [
+        {
+          "id": 1,
+          "authorId": 1,
+          "author": "이주이",
+          "content": "저는 소드가 재밌었어요! fd",
+          "createdAt": "2025-10-28T02:17:46.779Z"
+        },
+        {
+          "id": 2,
+          "authorId": 3,
+          "author": "편한",
+          "content": "난 포켓몬은 별로 ㅋㅋ",
+          "createdAt": "2025-10-28T06:14:32.179Z"
+        }
+      ]
+    }
+  ]
+}

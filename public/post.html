@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 상세</title>
+  <link rel="icon" href="https://user-images.githubusercontent.com/13339993/205411205-2d68d732-9413-46fe-9550-ba6f214b3433.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="post-view-container">
+    <div id="post-content">
+      <!-- JS로 내용이 채워집니다 -->
+      <h1 id="post-title"></h1>
+      <div class="post-meta">
+        <span id="post-author"></span> | <span id="post-date"></span>
+      </div>
+      <div class="post-body">
+        <p>여기는 게시글의 상세 내용이 들어갈 자리입니다. 지금은 임시 텍스트입니다.</p>
+      </div>
+    </div>
+
+    <div class="comments-section">
+      <h2>댓글</h2>
+      <div id="comments-list">
+        <!-- Comments will be rendered here by post.js -->
+      </div>
+      <div id="comment-form-container">
+        <!-- Comment form will be rendered here by post.js if user is logged in -->
+      </div>
+    </div>
+
+    <div class="button-container">
+        <div id="post-actions"></div>
+        <a href="/" class="back-button">목록으로</a>
+    </div>
+  </div>
+
+  <script src="/js/post.js"></script>
+</body>
+</html>

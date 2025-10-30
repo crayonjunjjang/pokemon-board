@@ -1,0 +1,557 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f0f2f5;
+  background-image: url('https://www.transparenttextures.com/patterns/gplay.png');
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-bar-container {
+  width: 80%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+#auth-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#auth-links span {
+  font-weight: 700;
+}
+
+.auth-button {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: #f0f2f5;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.auth-button:hover {
+  background-color: #e0e2e5;
+}
+
+.write-button {
+  display: inline-block;
+  padding: 8px 15px; /* Adjusted padding */
+  background-color: #3B4CCA;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.write-button:hover {
+  background-color: #2f3e9e;
+}
+
+.board-container, .post-view-container, .write-container {
+  width: 80%;
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  padding: 30px 40px;
+  border: 1px solid #e0e0e0;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.board-table th, .board-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.board-table thead {
+  background-color: #3B4CCA; /* 포켓몬 블루 */
+  color: #FFDE00; /* 포켓몬 옐로우 */
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.board-table tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.board-table tbody tr:hover {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.col-id    { width: 10%; text-align: center; }
+.col-title  { width: 50%; word-break: break-all; text-align: center; }
+.col-author { width: 20%; text-align: center; }
+.col-date   { width: 20%; text-align: center; }
+
+/* 상세 페이지 스타일 */
+.post-view-container h1 {
+    font-size: 2.5em;
+}
+
+.post-meta {
+  color: #666;
+  font-size: 1em;
+  text-align: center;
+  border-bottom: 2px dashed #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.post-body {
+  line-height: 1.8;
+  color: #333;
+  min-height: 200px;
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.post-body p {
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#post-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  display: inline-flex; 
+  align-items: center;
+  gap: 8px;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.edit-button {
+  background: linear-gradient(180deg, #4a90e2, #357abd);
+  border-bottom: 3px solid #2a6194;
+}
+
+.delete-button {
+  background: linear-gradient(180deg, #e24a4a, #c0392b);
+  border-bottom: 3px solid #a52a2a;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(180deg, #f04a4a, #CC0000); /* 포켓볼 레드 */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 700;
+    transition: all 0.3s;
+    border-bottom: 3px solid #990000;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(204, 0, 0, 0.3);
+}
+
+/* 글쓰기 페이지 스타일 */
+#write-form .form-group {
+  margin-bottom: 20px;
+}
+
+#write-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+#write-form input[type="text"],
+#write-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+}
+
+#write-form textarea {
+  resize: vertical;
+}
+
+.form-buttons {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.form-buttons .btn {
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.form-buttons .btn-submit {
+  background: linear-gradient(180deg, #3B4CCA, #2f3e9e);
+  color: white;
+  border-bottom: 3px solid #2f3e9e;
+}
+
+.form-buttons .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.form-buttons .btn-cancel {
+  background-color: #f0f2f5;
+  color: #333;
+  margin-right: 10px;
+}
+
+/* Form Group and Input Styles for Write/Edit Pages */
+.write-container .form-group {
+  margin-bottom: 20px;
+}
+
+.write-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.write-container input[type="text"],
+.write-container textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.write-container input[type="text"]:focus,
+.write-container textarea:focus {
+  border-color: #3B4CCA;
+  box-shadow: 0 0 0 3px rgba(59, 76, 202, 0.2);
+  outline: none;
+}
+
+.write-container textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Form Buttons for Write/Edit Pages */
+.write-container .form-buttons {
+  text-align: right;
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.write-container .form-buttons .btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  text-decoration: none; /* Ensure links also get button styling */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.write-container .form-buttons .btn-submit {
+  background: linear-gradient(180deg, #3B4CCA, #2f3e9e);
+  color: white;
+  border-bottom: 3px solid #2f3e9e;
+}
+
+.write-container .form-buttons .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.write-container .form-buttons .btn-cancel {
+  background-color: #f0f2f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.write-container .form-buttons .btn-cancel:hover {
+  background-color: #e0e2e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 인증 페이지 스타일 (로그인, 회원가입) */
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-top: 50px;
+}
+
+.auth-container .form-group {
+  margin-bottom: 15px;
+}
+
+.auth-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.auth-container .form-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.auth-container .btn-submit {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.auth-switch a {
+  color: #3B4CCA;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* 댓글 섹션 스타일 */
+.comments-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+}
+
+.comments-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.comment-main {
+  flex: 1;
+}
+
+.comment-meta {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.comment-meta strong {
+  color: #000;
+}
+
+.comment-meta span {
+  margin-left: 10px;
+  font-size: 0.9em;
+}
+
+.comment-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 1em;
+  padding: 5px;
+  transition: color 0.3s;
+}
+
+.icon-button:hover {
+  color: #333;
+}
+
+.edit-comment-btn:hover {
+  color: #4a90e2;
+}
+
+.delete-comment-btn:hover {
+  color: #e24a4a;
+}
+
+/* Comment Edit Form Styles */
+.edit-comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.edit-comment-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95em;
+  resize: vertical;
+  min-height: 80px;
+  box-sizing: border-box;
+}
+
+.edit-comment-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-save-comment {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.btn-save-comment:hover {
+  background-color: #45a049;
+}
+
+.btn-cancel-edit {
+  background-color: #f44336; /* Red */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s;
+}
+
+.btn-cancel-edit:hover {
+  background-color: #da190b;
+}
+
+#comment-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#comment-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Nunito', sans-serif;
+  box-sizing: border-box;
+  resize: vertical;
+  min-height: 80px;
+}
+
+#comment-form button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  background-color: #3B4CCA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 700;
+}
