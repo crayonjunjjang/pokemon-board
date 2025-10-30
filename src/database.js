@@ -5,9 +5,7 @@ const path = require('path');
 
 // 데이터베이스 파일(db.json)의 경로를 구성합니다.
 // 운영 환경(production)에서는 Render의 영구 디스크 경로를, 그 외에는 로컬 경로를 사용합니다.
-const dbPath = process.env.NODE_ENV === 'production'
-  ? '/data/db.json'
-  : path.join(__dirname, '..', 'db.json');
+const dbPath = path.join(__dirname, '..', 'db.json');
 
 /**
  * 비동기적으로 데이터베이스 파일(db.json)을 읽고 파싱합니다.
